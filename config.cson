@@ -1,0 +1,11 @@
+"*":
+  "exception-reporting":
+    userId: "a5ab2dc4-6fcc-de3f-d7d3-abce61e4973c"
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "terminal-status"
+    ]
+  editor:
+    invisibles: {}

@@ -1,0 +1,39 @@
+#HTML
+'.text.html':
+  'row bootstrap':
+    'prefix': 'div.row'
+    'body': """
+            <div class="row">
+              $1
+            </div>
+            """
+  'col bootstrap':
+    'prefix': 'div.col'
+    'body': """
+            <div class="col-${1:sm}-${2:X}">
+              $3
+            </div>
+            """
+  'select':
+    'prefix': 'select'
+    'body': """
+            <select>
+              <option value="$1">$2</option>
+            </select>
+            """
+  'ul':
+    'prefix': 'ul'
+    'body': """
+            <ul>
+              <li>$1</li>
+            </ul>
+            """
+#JavaScript
+'.source.js':
+  'for':
+    'prefix': 'for'
+    'body': """
+            for (var i = 0; i < ${1:Array}.length; i++) {
+              ${1:Array}[0] $2
+            }
+            """
