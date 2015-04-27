@@ -3,3 +3,4 @@ compile-cache
 dev
 .apm
 .node-gyp
+nohup.out
