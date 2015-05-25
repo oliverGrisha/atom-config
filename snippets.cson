@@ -28,6 +28,16 @@
               <li>$1</li>
             </ul>
             """
+  'li and span':
+    'prefix': 'lispan'
+    'body': """
+            <li><span>$1</span></li>
+            $2
+            """
+  'p':
+    'prefix': 'p'
+    'body': """<p>$1</p>"""
+
 #JavaScript
 '.source.js':
   'for':

@@ -51,33 +51,60 @@ module.exports =
         if filepath
             open_terminal path.dirname(filepath)
     openroot: ->
-        open_terminal path for path in atom.project.getPaths()
+        open_terminal pathname for pathname in atom.project.getPaths()
 
 # Set per-platform defaults
 if platform() == 'darwin'
   # Defaults for Mac, use Terminal.app
-  module.exports.configDefaults = {
-        app: 'Terminal.app'
-        args: ''
-        surpressDirectoryArgument: false
-        setWorkingDirectory: false
-        MacWinRunDirectly: false
-  }
+  module.exports.config =
+    app:
+      type: 'string'
+      default: 'Terminal.app'
+    args:
+      type: 'string'
+      default: ''
+    surpressDirectoryArgument:
+      type: 'boolean'
+      default: true
+    setWorkingDirectory:
+      type: 'boolean'
+      default: true
+    MacWinRunDirectly:
+      type: 'boolean'
+      default: false
 else if platform() == 'win32'
   # Defaults for windows, use cmd.exe as default
-  module.exports.configDefaults = {
-        app: 'C:\\Windows\\System32\\cmd.exe'
-        args: ''
-        surpressDirectoryArgument: false
-        setWorkingDirectory: true
-        MacWinRunDirectly: false
-  }
+  module.exports.config =
+      app:
+        type: 'string'
+        default: 'C:\\Windows\\System32\\cmd.exe'
+      args:
+        type: 'string'
+        default: ''
+      surpressDirectoryArgument:
+        type: 'boolean'
+        default: true
+      setWorkingDirectory:
+        type: 'boolean'
+        default: true
+      MacWinRunDirectly:
+        type: 'boolean'
+        default: false
 else
-    # Defaults for all other systems (linux I assume), use xterm
-    module.exports.configDefaults = {
-        app: '/usr/bin/x-terminal-emulator'
-        args: ''
-        surpressDirectoryArgument: true
-        setWorkingDirectory: true
-        MacWinRunDirectly: false
-    }
+  # Defaults for all other systems (linux I assume), use xterm
+  module.exports.config =
+      app:
+        type: 'string'
+        default: '/usr/bin/x-terminal-emulator'
+      args:
+        type: 'string'
+        default: ''
+      surpressDirectoryArgument:
+        type: 'boolean'
+        default: true
+      setWorkingDirectory:
+        type: 'boolean'
+        default: true
+      MacWinRunDirectly:
+        type: 'boolean'
+        default: false
