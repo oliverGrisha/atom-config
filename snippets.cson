@@ -47,3 +47,19 @@
               ${1:Array}[0] $2
             }
             """
+#PHP
+'.text.php':
+  'for':
+    'prefix': 'for'
+    'body': """
+            for ($i = 0; i < ${1:Array}.length; i++) {
+              ${1:Array}[0] $2
+            }
+            """
+  '/*':
+    'prefix': '/*'
+    'body': """
+            /**
+            * $1
+            */
+            """
