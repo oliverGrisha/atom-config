@@ -1,9 +1,11 @@
 storage
+nohup.out
 compile-cache
 dev
 .npm
 .node-gyp
 config.cson
+.apm
 init.coffee
 keymap.cson
 styles.less
