@@ -1,4 +1,0 @@
-[5689:0805/084112:ERROR:browser_main_loop.cc(170)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
-App load time: 266ms
-[5722:0805/084113:INFO:renderer_main.cc(212)] Renderer process started
-[5689:0805/084114:INFO:CONSOLE(59)] "Window load time: 1445ms", source: file:///usr/share/atom/resources/app/static/index.js (59)
